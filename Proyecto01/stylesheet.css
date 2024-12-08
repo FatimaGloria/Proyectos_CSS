@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Se agregan los tiempos clave que permitirán crear el efecto o animación de sube/baja o bote */
+@keyframes botar{
+    0% {
+        transform: translateY(-100%);
+    }
+
+    50% {
+        transform: translateY(0%)
+    }
+
+    100%{
+        transform: translateY(-100%);
+    }
+}
+
+/*Estilos para la barra de navegación */
+.navegacion{
+    /* Permite que el objeto vaya hacia arriba (-100%) */
+    transform: translateY(-100%);
+
+    /* Se define el nombre y la duración de la animación */
+    animation-name: botar;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+
+}
+
+/* Estilos para los titulos del menú */
+.menu li{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15 px;
+}
